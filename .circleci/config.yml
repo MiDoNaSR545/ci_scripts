@@ -16,12 +16,8 @@ jobs:
            git config --global user.email "ahmednasr1973913@gmail.com"
            git config --global color.ui false
       - run:
-          name: Clone telegram.sh & repo init
+          name: repo init
           command: |
-           wget https://raw.githubusercontent.com/SHRP-Devices/ci_scripts/master/.circleci/build
-           git clone https://github.com/fabianonline/telegram.sh telegram/
-           source build
-           tgsay "• Giovix92 CI - SHRP •" "Rollin' up!"
            repo init -u git://github.com/SKYHAWK-Recovery-Project/platform_manifest_twrp_omni.git -b beta3-9.0 --depth=1
       - run:
           name: Remove useless files
